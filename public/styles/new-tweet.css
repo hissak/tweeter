@@ -1,37 +1,57 @@
 
+main >section {
+  width: 100%;
+}
+main > section > h2 {
+  display: flex;
+  justify-content: center;
+  font-family: 'bungee', cursive;
+}
 form {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 5px;
 }
-form > div > label {
-  display: flex;
-  align-items: flex-end;
-}
+
 #tweet-input {
   display: flex;
   flex-direction: row;
-  border-bottom: 5px;
+  border-bottom: 2px;
   border-bottom-color: black;
   border-bottom-style: solid;
-  align-items: flex-end;
+  align-items: center;
   margin: 5px;
   padding: 5px;
-  justify-content: space-between;
 }
 
-form > div {
+#tweet-input > label {
+  font-size: 100%;
+  display: flex;
+  width: 100%;
+}
+
+#tweet-input > textarea {
+  background: transparent;
+  border: none;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+#tweet-submit {
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  font-family: 'Bungee', cursive;
 }
 
 
-form > div > button {
+#tweet-submit > button {
   display: flex;
   background-color: #4056A1;
-  font-family: 'Bungee', cursive;
   color: white;
   border: none;
+  font-size: 80%;
+  align-items: center;
 }

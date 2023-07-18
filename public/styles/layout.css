@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: purple;
+  background-color: cornsilk;
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -34,6 +34,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: olivedrab;
+  background: transparent;
   margin: 0 auto;
  }
