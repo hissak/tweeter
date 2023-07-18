@@ -42,8 +42,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2.5%;
-  height: 5%;
   align-items: center;
   font-size: larger;
  }
@@ -62,16 +60,14 @@ body {
 }
 
  article.tweet > p {
-  padding: 2.5%;
   border-bottom-style: solid;
   border-bottom-color: black;
   display: flex;
-  height: 90%;
-  align-items: flex-end;
+  height: 80%;
+  align-items: center;
  }
 
  article.tweet > footer {
-  padding: 1%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -88,7 +84,7 @@ body {
   flex-direction: column;
   border-style: solid;
   border-color: #545149;
-  padding: 2%;
+  padding: 1%;
   margin-top: 2%;
   height: 250px;
  }
