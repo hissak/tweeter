@@ -37,3 +37,58 @@ body {
   background: transparent;
   margin: 0 auto;
  }
+
+ article.tweet > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5%;
+  height: 5%;
+  align-items: center;
+  font-size: larger;
+ }
+#tweet-header-p1 > i {
+  font-size: 35pt
+}
+#tweet-header-p1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweet-header-p2 {
+  font-weight: bold;
+  color: grey;
+}
+
+ article.tweet > p {
+  padding: 2.5%;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  display: flex;
+  height: 90%;
+  align-items: flex-end;
+ }
+
+ article.tweet > footer {
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5%;
+  align-items: center;
+ }
+
+ #like-flag-report > i:hover {
+  color: goldenrod;
+ }
+
+ article.tweet {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: #545149;
+  padding: 2%;
+  margin-top: 2%;
+  height: 250px;
+ }
