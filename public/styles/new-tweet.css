@@ -1,6 +1,13 @@
 
-form > label {
-  background-color: blueviolet;
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+form > div > label {
+  display: flex;
+  align-items: flex-end;
 }
 #tweet-input {
   display: flex;
@@ -8,7 +15,8 @@ form > label {
   border-bottom: 5px;
   border-bottom-color: black;
   border-bottom-style: solid;
-  align-items: center;
+  align-items: flex-end;
+  margin: 5px;
   padding: 5px;
   justify-content: space-between;
 }
@@ -16,6 +24,14 @@ form > label {
 form > div {
   display: flex;
   justify-content: space-between;
+  padding: 5px;
 }
 
 
+form > div > button {
+  display: flex;
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+  color: white;
+  border: none;
+}
