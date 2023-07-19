@@ -69,4 +69,17 @@ const data = [
 // $('.tweet-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 renderTweets(data);
 
+$('.Submit-tweet').on("submit", function(event){ // must always target the form element and not the button directly
+  event.preventDefault();
+  console.log('Prevent default behaviour!');
+  const url = $(this).attr('action');
+  const data = $(this).serialize(); 
+  $.post(url, data).done(function(result) {//ASK MENTOR ABOUT {DATA:DATA}
+    console.log('Tweet data below');
+    console.log(data);
+    console.log(result);
+  })
 })
+
+})
+
