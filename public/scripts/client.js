@@ -6,19 +6,26 @@
 $(document).ready(function() {
 
 const createTweetElement = function(tweet) {
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const $tweet = `<article class="tweet">
           <header>
             <p id="tweet-header-p1">
-              <img src=${tweet.user.avatars}>
-              ${tweet.user.name}
+              <img src=${escape(tweet.user.avatars)}>
+              ${escape(tweet.user.name)}
             </p>
             <p id="tweet-header-p2">
-              ${tweet.user.handle}
+              ${escape(tweet.user.handle)}
             </p>
           </header>
-          <p>${tweet.content.text}</p>
+          <p>${escape(tweet.content.text)}</p>
           <footer>
-            <p>${Date(tweet.created_at)}</p>
+            <p>${escape(timeago.format(tweet.created_at))}</p>
             <p id="like-flag-report">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
@@ -28,51 +35,12 @@ const createTweetElement = function(tweet) {
         </article>`;
         return $tweet;
 }
-const createTweetButBetter = function(tweet) {
-  const { avatar, name, handle } = tweet.user;
-  const { text } = tweet.content;
-  const date = tweet.created_at;
-  const $article = $('<article>');
-  const $header = $('<header>');
-  const $avatarAndUser = $('<p>');
-  const $avatar = $('<img>')
-  const $handle = $('<p>');
-  const $tweet = $('<p>');
-  const $date = $('<p>');
-  const $footer = $('<footer>');
-  const $buttons = $('p');
-  const $flag = $('<i>');
-  const $retweet = $('<i>');
-  const $heart = $('<i>');
 
-  $article.addClass('tweet');
-  $avatarAndUser.attr('id', 'tweet-header-p1');
-  $avatar.attr('src', `${avatar}`);
-  $handle.attr('id', 'tweet-header-p2');
-  $buttons.attr('id', 'like-flag-report');
-  $flag.addClass('fa-solid fa-flag');
-  $retweet.addClass('fa-solid fa-retweet');
-  $heart.addClass('fa-solid fa-heart');
-
-  $avatarAndUser.append($avatar, name);
-  $handle.text(`handle`);
-  $header.append($avatarAndUser, handle);
-
-  $tweet.text(`${text}`);
-
-  $date.text(`${Date(date)}`);
-  $buttons.append($flag, $retweet, $heart);
-  $footer.append($date, $buttons);
-
-  $article.append($header, $tweet, $footer);
-  console.log($article)
-  return $article
-}
 
 const renderTweets = function(tweets) {
   const tweetContainer = $('.tweet-container').html('')
   let tweetArray = tweets.map((tweet) => {
-    const tweetElement = createTweetButBetter(tweet);
+    const tweetElement = createTweetElement(tweet);
     return tweetContainer.append(tweetElement)
   });
 }
