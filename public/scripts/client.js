@@ -33,7 +33,7 @@ const renderTweets = function(tweets) {
   const tweetContainer = $('.tweet-container').html('')
   let tweetArray = tweets.map((tweet) => {
     const tweetElement = createTweetElement(tweet);
-    return tweetContainer.prepend(tweetElement)
+    return tweetContainer.append(tweetElement)
   });
 }
 
@@ -41,8 +41,9 @@ const renderTweets = function(tweets) {
 
 const loadTweets = function(api) {
   $.get(api).then(function(res){
-    console.log(res);
-    renderTweets(res);
+    const reversedRes = res.reverse();
+    console.log(reversedRes);
+    renderTweets(reversedRes);
   })
 }
 // Alternative ajax request below
