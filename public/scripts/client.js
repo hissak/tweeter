@@ -76,6 +76,19 @@ const loadTweets = function(api) {
     renderTweets(res);
   })
 }
+// Alternative ajax request below
+// const loadTweets = function(api) {
+//   $.ajax({type: 'GET',
+//   url: api,
+//   success: function(res) {
+//     console.log(res);
+//     renderTweets(res);
+//   },
+//   error: function(res) {
+//     console.log('ERROR!!!!! ===> ', res.status);
+//   }
+//   })
+// }
 loadTweets('/tweets');
 
 $('.Submit-tweet').on("submit", function(event){ // must always target the form element and not the button directly
@@ -83,11 +96,20 @@ $('.Submit-tweet').on("submit", function(event){ // must always target the form 
   console.log('Prevent default behaviour!');
   const url = $(this).attr('action');
   const data = $(this).serialize(); //Instead of this, maybe event.currentTarget?
-  console.log('This! ==> ', data)
+  const form = $('#tweet-text').val();
+  console.log('This! ==> ', form)
+  if(!form) {
+    alert('Cannot post an empty tweet!')
+    return false
+  } else if (form.length > 150){
+    alert('Character limit exceeded!')
+  return false
+} else {
   $.post(url, data).then(function(result) {
     console.log('Tweet data below');
     console.log('Result ==> ', result);
   })
+}
 })
 })
 
