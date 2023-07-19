@@ -101,13 +101,14 @@ $('.Submit-tweet').on("submit", function(event){ // must always target the form 
   if(!form) {
     alert('Cannot post an empty tweet!')
     return false
-  } else if (form.length > 150){
+  } else if (form.length > 140){
     alert('Character limit exceeded!')
   return false
 } else {
   $.post(url, data).then(function(result) {
     console.log('Tweet data below');
     console.log('Result ==> ', result);
+    $('.Submit-tweet')[0].reset();
   })
 }
 })

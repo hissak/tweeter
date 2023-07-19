@@ -2,7 +2,7 @@
 let charCount = 0
 
 $(document).ready(function() {
-  let charLimit = 150;
+  let charLimit = 140;
   let availableChars = 0;
   $('#counter').text(`${charLimit} characters left`)
 
