@@ -28,11 +28,51 @@ const createTweetElement = function(tweet) {
         </article>`;
         return $tweet;
 }
+const createTweetButBetter = function(tweet) {
+  const { avatar, name, handle } = tweet.user;
+  const { text } = tweet.content;
+  const date = tweet.created_at;
+  const $article = $('<article>');
+  const $header = $('<header>');
+  const $avatarAndUser = $('<p>');
+  const $avatar = $('<img>')
+  const $handle = $('<p>');
+  const $tweet = $('<p>');
+  const $date = $('<p>');
+  const $footer = $('<footer>');
+  const $buttons = $('p');
+  const $flag = $('<i>');
+  const $retweet = $('<i>');
+  const $heart = $('<i>');
+
+  $article.addClass('tweet');
+  $avatarAndUser.attr('id', 'tweet-header-p1');
+  $avatar.attr('src', `${avatar}`);
+  $handle.attr('id', 'tweet-header-p2');
+  $buttons.attr('id', 'like-flag-report');
+  $flag.addClass('fa-solid fa-flag');
+  $retweet.addClass('fa-solid fa-retweet');
+  $heart.addClass('fa-solid fa-heart');
+
+  $avatarAndUser.append($avatar, name);
+  $handle.text(`handle`);
+  $header.append($avatarAndUser, handle);
+
+  $tweet.text(`${text}`);
+
+  $date.text(`${Date(date)}`);
+  $buttons.append($flag, $retweet, $heart);
+  $footer.append($date, $buttons);
+
+  $article.append($header, $tweet, $footer);
+  console.log($article)
+  return $article
+}
 
 const renderTweets = function(tweets) {
   const tweetContainer = $('.tweet-container').html('')
   let tweetArray = tweets.map((tweet) => {
-    const tweetElement = createTweetElement(tweet);
+    const tweetElement = createTweetButBetter(tweet);
     return tweetContainer.append(tweetElement)
   });
 }
@@ -46,19 +86,7 @@ const loadTweets = function(api) {
     renderTweets(reversedRes);
   })
 }
-// Alternative ajax request below
-// const loadTweets = function(api) {
-//   $.ajax({type: 'GET',
-//   url: api,
-//   success: function(res) {
-//     console.log(res);
-//     renderTweets(res);
-//   },
-//   error: function(res) {
-//     console.log('ERROR!!!!! ===> ', res.status);
-//   }
-//   })
-// }
+
 loadTweets('/tweets');
 
 $('.Submit-tweet').on("submit", function(event){ // must always target the form element and not the button directly
