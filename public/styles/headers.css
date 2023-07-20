@@ -1,5 +1,5 @@
 .user-details {
-  background-color: #851400;
+  background-color: #4056A1;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   display: flex;
   flex-direction: column;
@@ -8,4 +8,11 @@
   width: 100%;
 }
 
-
+.user-details div h2 {
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  border-radius: 10%;
+  padding: 10%;
+  text-align: center;
+  color: cornsilk;
+}

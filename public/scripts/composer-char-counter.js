@@ -11,14 +11,15 @@ $(document).ready(function() {
     const counter = $('#counter');
     if(availableChars < 0) {
       $(counter).text(availableChars + ' characters left').css('color', 'red');
-      $('.error-message').html('<i class="fa-solid fa-circle-exclamation"></i> Character limit exceeded!').fadeIn('slow');    $('.error-message').css('display', 'block');
+      $('.error-message').html('<i class="fa-solid fa-circle-exclamation"></i> Character limit exceeded!').fadeIn('slow'); 
+      $('.error-message').css('display', 'block');
     // setTimeout(function(){
     //   $('.error-message').fadeOut('slow');
     // }, 5000);
 
   } else {
     $('.error-message').fadeOut('slow');
-    $(counter).text(availableChars + ' characters left').css('color', 'black')
+    $(counter).text(availableChars + ' characters left').css('color', '#545149')
   }
   })
 }
