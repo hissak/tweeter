@@ -29,13 +29,27 @@ body {
   font-family: 'Bungee', cursive;
  }
 
- main {
-  width: 90%;
+ .container {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: transparent;
   margin: 0 auto;
+  margin-bottom: 2%;
+ }
+
+ .user-details div h2 {
+  background-color: #851400;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  border-radius: 10%;
+  padding: 10%;
+  text-align: center;
+  color: cornsilk;
+}
+
+ .tweet-area {
+  width: 90%;
  }
 
  article.tweet header {
@@ -59,7 +73,7 @@ body {
   color: grey;
 }
 
- article.tweet > p {
+ .tweet > p {
   border-bottom-style: solid;
   border-bottom-color: black;
   display: flex;
@@ -67,7 +81,7 @@ body {
   align-items: center;
  }
 
- article.tweet footer {
+ .tweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -79,12 +93,13 @@ body {
   color: goldenrod;
  }
 
- article.tweet {
+ .tweet {
   display: flex;
   flex-direction: column;
-  border-style: solid;
+  border-style: outset;
+  border-radius: 20px;
   border-color: #545149;
-  padding: 1%;
+  padding: 2%;
   margin-top: 2%;
   height: 250px;
  }
@@ -94,16 +109,15 @@ body {
   justify-content: space-around;
   color: red;
   font-family: 'Source Sans 3', sans-serif;
-  background-color: red;
   background: rgba(255, 0, 0, 0.1);
   border: 1px solid red;
+  border-radius: 25px;
   text-align: center;
   margin: 0 auto;
  }
-
+/* 
  @media only screen and (max-width: 768px) {
   .navAndHeader{
-    margin-top: 0;
     background-color: #851400;
     background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
   }
@@ -112,7 +126,75 @@ body {
   background: none;
 }
 .navAndHeader header {
-  padding-top: 0;
+  margin-top: 0;
+}
 }
 
- }
+@media  and (min-width) {
+  
+} */
+
+@media only screen and (min-width: 1024px) {
+  .navAndHeader nav {
+    position: fixed;
+    background-color: #851400;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  }
+/* .navAndHeader header {
+  display: flex;
+  justify-content: flex-start;
+} */
+body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 20 20px;
+  margin-top: 120px;
+}
+.user-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: #851400;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+border-radius: 10%;
+  padding: 2%;
+  margin-right: 2%;
+}
+/* .navAndHeader header {
+  margin-right: 2px;
+  position: static;
+} */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}
+.tweet-area {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.tweet-container {
+  display: flex;
+  border: solid #545149 2px;
+  border-radius: 2%;
+  padding: 1%;
+  max-height: 800px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  scroll-behavior: smooth;
+}
+.tweet.parent {
+  background-color: #851400;
+}
+.error-message {
+  max-width: 400px
+}
+
+}

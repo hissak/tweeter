@@ -1,3 +1,9 @@
+
+.navAndHeader{
+  background-color: #851400;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+}
+
 .navAndHeader nav {
   height: 120px;
   display: flex;
@@ -5,18 +11,19 @@
   color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   width: 100%;
   top: 0;
+  position: static;
+  background: none;
 }
 
-nav > span {
+.navAndHeader nav > span {
   font-family: 'Bungee', cursive;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
 
-nav > div {
+.navAndHeader nav > div {
   padding-left: 1.5em;
   padding-right: 1.5em;
   text-align: center;
