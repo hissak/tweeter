@@ -25,13 +25,13 @@ form {
   padding: 5px;
 }
 
-#tweet-input > label {
+#tweet-input label {
   font-size: 100%;
   display: flex;
   width: 100%;
 }
 
-#tweet-input > textarea {
+#tweet-input textarea {
   background: transparent;
   border: none;
   display: flex;
@@ -47,7 +47,7 @@ form {
 }
 
 
-#tweet-submit > button {
+#tweet-submit button {
   display: flex;
   background-color: #4056A1;
   color: white;

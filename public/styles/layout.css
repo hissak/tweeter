@@ -38,14 +38,14 @@ body {
   margin: 0 auto;
  }
 
- article.tweet > header {
+ article.tweet header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: larger;
  }
-#tweet-header-p1 > i {
+#tweet-header-p1 i {
   font-size: 35pt
 }
 #tweet-header-p1 {
@@ -67,7 +67,7 @@ body {
   align-items: center;
  }
 
- article.tweet > footer {
+ article.tweet footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -75,7 +75,7 @@ body {
   align-items: center;
  }
 
- #like-flag-report > i:hover {
+ #like-flag-report i:hover {
   color: goldenrod;
  }
 
@@ -87,4 +87,16 @@ body {
   padding: 1%;
   margin-top: 2%;
   height: 250px;
+ }
+
+ .error-message {
+  display: none;
+  justify-content: space-around;
+  color: red;
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: red;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  text-align: center;
+  margin: 0 auto;
  }

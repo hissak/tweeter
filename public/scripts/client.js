@@ -65,19 +65,18 @@ $('.Submit-tweet').on("submit", function(event){ // must always target the form 
   const form = $('#tweet-text').val();
   console.log('This! ==> ', form)
   if(!form) {
-    alert('Cannot post an empty tweet!')
+    $('.error-message').html('<i class="fa-solid fa-circle-exclamation"></i> Cannot post a blank tweet!').fadeIn('slow');
     return false
   } else if (form.length > 140){
-    alert('Character limit exceeded!')
   return false
-} else {
+} else { $('.error-message').fadeOut('slow'); };
+
   $.post(url, data).then(function(result) {
     console.log('Tweet data below');
     console.log('Result ==> ', result);
     loadTweets('/tweets');
     $('.Submit-tweet')[0].reset();
   })
-}
 })
 })
 

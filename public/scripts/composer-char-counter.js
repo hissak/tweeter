@@ -1,5 +1,4 @@
 
-let charCount = 0
 
 $(document).ready(function() {
   let charLimit = 140;
@@ -11,8 +10,14 @@ $(document).ready(function() {
     console.log(availableChars);
     const counter = $('#counter');
     if(availableChars < 0) {
-      $(counter).text(availableChars + ' characters left').css('color', 'red')
+      $(counter).text(availableChars + ' characters left').css('color', 'red');
+      $('.error-message').html('<i class="fa-solid fa-circle-exclamation"></i> Character limit exceeded!').fadeIn('slow');    $('.error-message').css('display', 'block');
+    // setTimeout(function(){
+    //   $('.error-message').fadeOut('slow');
+    // }, 5000);
+
   } else {
+    $('.error-message').fadeOut('slow');
     $(counter).text(availableChars + ' characters left').css('color', 'black')
   }
   })
