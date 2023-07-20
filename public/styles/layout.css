@@ -100,3 +100,19 @@ body {
   text-align: center;
   margin: 0 auto;
  }
+
+ @media only screen and (max-width: 768px) {
+  .navAndHeader{
+    margin-top: 0;
+    background-color: #851400;
+    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
+  }
+.navAndHeader nav {
+  position: static;
+  background: none;
+}
+.navAndHeader header {
+  padding-top: 0;
+}
+
+ }
