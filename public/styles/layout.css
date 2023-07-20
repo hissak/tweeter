@@ -94,6 +94,9 @@ body {
   margin-top: 2%;
   height: 250px;
  }
+ .tweet:hover {
+  box-shadow: 5px 10px 5px goldenrod;
+}
 
  .error-message {
   display: none;
