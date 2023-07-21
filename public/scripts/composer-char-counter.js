@@ -3,7 +3,7 @@
 $(document).ready(function() {
   let charLimit = 140;
   let availableChars = 0;
-  $('#counter').text(`${charLimit} characters left`)
+  $('#counter').text(`${charLimit} characters left`);
 
   $('#tweet-text').on('input', function(event) {
     availableChars = charLimit - $(this).val().length;
@@ -13,14 +13,10 @@ $(document).ready(function() {
       $(counter).text(availableChars + ' characters left').css('color', 'red');
       $('.error-message').html('<i class="fa-solid fa-circle-exclamation"></i> Character limit exceeded!').fadeIn('slow'); 
       $('.error-message').css('display', 'block');
-    // setTimeout(function(){
-    //   $('.error-message').fadeOut('slow');
-    // }, 5000);
-
-  } else {
-    $('.error-message').fadeOut('slow');
-    $(counter).text(availableChars + ' characters left').css('color', '#545149')
-  }
+    } else {
+      $('.error-message').fadeOut('slow');
+      $(counter).text(availableChars + ' characters left').css('color', '#545149')
+    }
   })
 }
 );

@@ -1,11 +1,11 @@
 
-main >section {
+.container >section {
   width: 100%;
 }
 .tweet-area h2 {
   display: flex;
   justify-content: center;
-  font-family: 'bungee', cursive;
+  font-family: 'Bungee', cursive;
 }
 form {
   display: flex;
@@ -46,12 +46,16 @@ form {
   font-family: 'Bungee', cursive;
 }
 
+#tweet-submit button:hover {
+  box-shadow: 0px 0px 5px black;
+}
+
 
 #tweet-submit button {
   display: flex;
   background-color: #4056A1;
   color: white;
-  border: none;
+  border-radius: 5px;
   font-size: 80%;
   align-items: center;
 }

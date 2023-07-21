@@ -109,24 +109,7 @@ body {
   text-align: center;
   margin: 0 auto;
  }
-/* 
- @media only screen and (max-width: 768px) {
-  .navAndHeader{
-    background-color: #851400;
-    background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
-  }
-.navAndHeader nav {
-  position: static;
-  background: none;
-}
-.navAndHeader header {
-  margin-top: 0;
-}
-}
 
-@media  and (min-width) {
-  
-} */
 
 @media only screen and (min-width: 1024px) {
   .navAndHeader nav {
@@ -134,10 +117,7 @@ body {
     background-color: #4056A1;
     background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   }
-/* .navAndHeader header {
-  display: flex;
-  justify-content: flex-start;
-} */
+
 body {
   display: flex;
   justify-content: space-between;
@@ -157,10 +137,7 @@ border-radius: 10%;
   padding: 2%;
   margin-right: 2%;
 }
-/* .navAndHeader header {
-  margin-right: 2px;
-  position: static;
-} */
+
 .container {
   display: flex;
   flex-direction: row;
