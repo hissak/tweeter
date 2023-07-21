@@ -57,11 +57,11 @@ const loadTweets = function(api) {
 
 loadTweets('/tweets');
 
-$('.Submit-tweet').on("submit", function(event){ // must always target the form element and not the button directly
+$('.Submit-tweet').on("submit", function(event){ 
   event.preventDefault();
   console.log('Prevent default behaviour!');
   const url = $(this).attr('action');
-  const data = $(this).serialize(); //Instead of this, maybe event.currentTarget?
+  const data = $(this).serialize(); 
   const form = $('#tweet-text').val();
   console.log('This! ==> ', form)
   if(!form) {
@@ -76,6 +76,7 @@ $('.Submit-tweet').on("submit", function(event){ // must always target the form 
     console.log('Result ==> ', result);
     loadTweets('/tweets');
     $('.Submit-tweet')[0].reset();
+    $('#counter').text(`140 characters left`);
   })
 })
 })
