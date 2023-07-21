@@ -34,9 +34,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: transparent;
   margin: 0 auto;
   margin-bottom: 2%;
+  margin-top: 120px;
  }
 
  .tweet-area {
@@ -112,8 +112,7 @@ body {
 
 
 @media only screen and (min-width: 1024px) {
-  .navAndHeader nav {
-    position: fixed;
+  .navbar nav {
     background-color: #4056A1;
     background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   }

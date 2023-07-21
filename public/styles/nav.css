@@ -1,29 +1,29 @@
 
-.navAndHeader{
+/* .navbar{
   background-color: #4056A1;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-}
+} */
 
-.navAndHeader nav {
+.navbar nav {
   height: 120px;
   display: flex;
-  /* background-color: #4056A1; */
+  background-color: #4056A1;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   color: #FFFFFF;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   top: 0;
-  position: static;
-  background: none;
+  position: fixed;
 }
 
-.navAndHeader nav > span {
+.navbar nav > span {
   font-family: 'Bungee', cursive;
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
 
-.navAndHeader nav > div {
+.navbar nav > div {
   padding-left: 1.5em;
   padding-right: 1.5em;
   text-align: center;
