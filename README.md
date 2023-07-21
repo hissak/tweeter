@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Users are able to compase new tweets, with character count updated in realtime. New tweets are then added to the list of displayed tweets without the need to refresh. Tweet submission also includes validation to ensure that user is not exceeding character limit nor submitting an empty tweet. The web page is designed to accomodate tablet/mobile and desktop users. In desktop view, tweets are contained in a scroll box.
 
 ## Getting Started
 
