@@ -2,6 +2,7 @@
 .container >section {
   width: 100%;
 }
+/* All styling related to the compose tweet area. */
 .tweet-area h2 {
   display: flex;
   justify-content: center;

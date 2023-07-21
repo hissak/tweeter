@@ -25,10 +25,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- head {
-  font-family: 'Bungee', cursive;
- }
-
+/* Styling for area to compose and display tweets */
  .container {
   width: 100%;
   display: flex;
@@ -110,7 +107,7 @@ body {
   margin: 0 auto;
  }
 
-
+/* Updated styling for webpage if viewed on desktop (ie: width >= 1024px */
 @media only screen and (min-width: 1024px) {
   .navbar nav {
     background-color: #4056A1;
