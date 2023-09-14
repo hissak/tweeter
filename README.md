@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-Users are able to compase new tweets, with character count updated in realtime. New tweets are then added to the list of displayed tweets without the need to refresh. Tweet submission also includes validation to ensure that user is not exceeding character limit nor submitting an empty tweet. Hovering over a tweet or the tweet button will create a box shadow. The like, retweet and report buttons also change colour on mouse hover. The web page is designed to accomodate tablet/mobile and desktop users. In desktop view, tweets are contained in a scroll box.
+Users are able to compose new tweets, with character count updated in realtime. New tweets are then added to the list of displayed tweets without the need to refresh. Tweet submission also includes validation to ensure that user is not exceeding character limit nor submitting an empty tweet. Hovering over a tweet or the tweet button will create a box shadow. The like, retweet and report buttons also change colour on mouse hover. The web page is designed to accomodate tablet/mobile and desktop users. In desktop view, tweets are contained in a scroll box.
 
 ## Final Product
 
